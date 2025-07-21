@@ -582,7 +582,7 @@ class Attribute extends Import
 
             $values = [
                 'attribute_id' => $row['_entity_id'],
-                'additional_data' => $attributeAdditionalData[$row['type']] ?? NULL
+                'additional_data' => $attributeAdditionalData[$row['type']] ?? $additionalData
             ];
 
             $connection->insertOnDuplicate(
